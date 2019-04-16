@@ -25,7 +25,7 @@ mongoose.connect(mongoURL);
 
 var Transaction = require('./models/transaction');
 
-var route = express.Router();
+var route = express.Router(); 
 
 // All our services are under the /api context
 app.use('/api', route);
@@ -37,6 +37,7 @@ route.get('/', function(req, res) {
     res.send('Hi! I am running on host -> ' + hostname + '\n');
 });
 
+// Post route
 // This route handles tax calculation for our service
 route.route('/calculate')
      .post(function(req, res) {
@@ -46,7 +47,7 @@ route.route('/calculate')
         tx.amount = req.body.amount;
 
         // Assume a 30% tax on all orders
-        var finalAmount = tx.amount + (tx.amount * .2);
+        var finalAmount = tx.amount + (tx.amount * .3); // increase to 30%
 
         tx.save(function(e) {
             if (e)
@@ -59,6 +60,7 @@ route.route('/calculate')
 
     });
 
+// get route
 // This route dumps all transactions
 route.route('/list')
      .get(function(req, res) {
