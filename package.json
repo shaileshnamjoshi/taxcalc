@@ -16,12 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/rsriniva/taxcalc.git"
+    "url": "https://github.com/shaileshnamjoshi/taxcalc.git"
   },
-  "author": "Ravi Srinivasan <ravis@redhat.com>",
+  "author": "Shailesh Namjoshi <shailesh.96@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "http://github.com/rsriniva/taxcalc/issues"
   },
-  "homepage": "http://github.com/rsriniva/taxcalc"
+  "homepage": "https://github.com/shaileshnamjoshi/taxcalc.git"
 }
